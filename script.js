@@ -1,9 +1,9 @@
 function run ()
 {
-    var calendarId = 'primary';
-    var start = getRelativeDate(1, 12);
-    var end = getRelativeDate(1, 13);
-    var summary = 'Lunch Meeting';
+    const calendarId = 'primary';
+    const start = getRelativeDate(1, 12);
+    const end = getRelativeDate(1, 13);
+    const summary = 'Lunch Meeting';
     createEvent(calendarId, start, end, summary)
 }
 
@@ -11,7 +11,7 @@ function run ()
  * Creates an event in the user's default calendar.
  */
 function createEvent(calendarId, start, end, summary, description='') {
-    var event = {
+    let event = {
         summary: summary,
         description: description,
         start: {
