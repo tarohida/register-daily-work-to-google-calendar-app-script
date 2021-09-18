@@ -1,4 +1,4 @@
-function getTasks () {
+function tasks () {
     return [
         'title1',
         'title2',
@@ -9,11 +9,10 @@ function getTasks () {
 function run ()
 {
     const calendarId = 'primary';
-    const array = getTasks();
     const start = new Date();
     let end = new Date();
     start.setHours(9,0,0);
-    array.forEach(summary => {
+    tasks().forEach(summary => {
             end.setTime(start.getTime() + 15 * 60 * 1000);
             createEvent(calendarId, start, end, summary)
             start.setTime(start.getTime() + 15 * 60 * 1000);
