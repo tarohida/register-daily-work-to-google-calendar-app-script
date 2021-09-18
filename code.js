@@ -1,11 +1,15 @@
-function run ()
-{
-    const calendarId = 'primary';
-    const array = [
+function getTasks () {
+    return [
         'title1',
         'title2',
         'title3'
-    ];
+    ]
+}
+
+function run ()
+{
+    const calendarId = 'primary';
+    const array = getTasks();
     const start = new Date();
     let end = new Date();
     start.setHours(9,0,0);
