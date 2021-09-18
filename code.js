@@ -1,4 +1,48 @@
-function tasks () {
+function getWeekDay ()
+{
+    return null;
+    // return 'sat';
+    // return 'sun';
+}
+
+function weekendTasks ()
+{
+    return [
+        'title1',
+        'title2',
+        'title3'
+    ]
+}
+
+function saturdayTask()
+{
+    const tasks =  [
+        'title1',
+        'title2',
+        'title3'
+    ]
+    return tasks.concat(weekendTasks());
+}
+
+function sundayTasks()
+{
+    const tasks = [
+        'title1',
+        'title2',
+        'title3'
+    ]
+    return tasks.concat(weekendTasks())
+}
+
+function tasks ()
+{
+    if (getWeekDay() === 'sat') {
+        return saturdayTask()
+    }
+
+    if (getWeekDay() === 'sun') {
+        return sundayTasks()
+    }
     return [
         'title1',
         'title2',
